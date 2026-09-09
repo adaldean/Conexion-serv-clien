@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Videojuegos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+<h1>Videojuegos</h1>
+
+<a href="{{ url_for('agregar_videojuego') }}">Agregar Videojuego</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th><th>Nombre</th><th>Género</th><th>Precio</th><th>Acciones</th>
+    </tr>
+
+    {% for v in videojuegos %}
+    <tr>
+        <td>{{ v[0] }}</td>
+        <td>{{ v[1] }}</td>
+        <td>{{ v[2] }}</td>
+        <td>${{ v[3] }}</td>
+        <td>
+            <a href="{{ url_for('editar_videojuego', id=v[0]) }}">Editar</a>
+            <a href="{{ url_for('eliminar_videojuego', id=v[0]) }}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="{{ url_for('dashboard') }}">Regresar</a>
+
+</body>
+</html>

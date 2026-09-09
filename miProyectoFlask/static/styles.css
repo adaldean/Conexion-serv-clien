@@ -1,0 +1,153 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor general */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2, h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ======== TABLAS ======== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgb(70, 68, 68);
+}
+
+table thead {
+    background: #3498db;
+    color: rgb(107, 99, 99);
+}
+
+table th, table td {
+    border: 1px solid rgb(70, 68, 68);
+    padding: 10px;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background: #575050;
+}
+
+table tr:hover {
+    background: #708eb3;
+}
+
+/* ======== BOTONES ======== */
+button, input[type="submit"], a.btn {
+    background: #3498db;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 3px;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+button:hover, input[type="submit"]:hover, a.btn:hover {
+    background: #2c82ba;
+}
+
+/* ======== BOTONES GENERALES PARA <a> ======== */
+a[href] {
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    display: inline-block;
+    margin: 5px 3px;
+}
+
+/* ======== BOTÓN AZUL: EDITAR, REGRESAR ======== */
+a[href*="editar"],
+a[href*="dashboard"],
+a[href*="regresar"] {
+    background: #3498db;
+}
+
+a[href*="editar"]:hover,
+a[href*="dashboard"]:hover,
+a[href*="regresar"]:hover {
+    background: #2c82ba;
+}
+
+/* ======== BOTÓN ROJO: ELIMINAR ======== */
+a[href*="eliminar"] {
+    background: #e74c3c;
+}
+
+a[href*="eliminar"]:hover {
+    background: #c0392b;
+}
+
+/* ======== OPCIONAL: BOTÓN VERDE PARA NUEVO ======== */
+a[href*="nuevo"],
+a[href*="agregar"],
+a[href*="crear"] {
+    background: #27ae60;
+}
+
+a[href*="nuevo"]:hover,
+a[href*="agregar"]:hover,
+a[href*="crear"]:hover {
+    background: #1e8449;
+}
+
+/* ======== FORMULARIOS ======== */
+form {
+    margin-top: 20px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* ======== MENÚ SUPERIOR ======== */
+.navbar {
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}

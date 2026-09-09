@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Compra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+<h1>Registrar Compra</h1>
+
+<form method="POST">
+
+    <label>Seleccionar Usuario:</label><br>
+    <select name="id_usuario">
+        {% for u in usuarios %}
+        <option value="{{ u[0] }}">{{ u[1] }} {{ u[2] }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Seleccionar Videojuego:</label><br>
+    <select name="id_videojuego">
+        {% for v in videojuegos %}
+        <option value="{{ v[0] }}">{{ v[1] }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <button type="submit">Registrar</button>
+
+</form>
+
+<a href="{{ url_for('dashboard') }}">Regresar</a>
+
+</body>
+</html>

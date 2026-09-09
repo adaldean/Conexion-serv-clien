@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empleados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+<h1>Empleados</h1>
+
+<a href="{{ url_for('agregar_empleado') }}">Agregar Empleado</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th><th>Nombre</th><th>Puesto</th><th>Salario</th><th>Acciones</th>
+    </tr>
+
+    {% for e in empleados %}
+    <tr>
+        <td>{{ e[0] }}</td>
+        <td>{{ e[1] }}</td>
+        <td>{{ e[2] }}</td>
+        <td>${{ e[3] }}</td>
+        <td>
+            <a href="{{ url_for('editar_empleado', id=e[0]) }}">Editar</a>
+            <a href="{{ url_for('eliminar_empleado', id=e[0]) }}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="{{ url_for('dashboard') }}">Regresar</a>
+
+</body>
+</html>

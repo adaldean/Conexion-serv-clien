@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+<h1>Compras Registradas</h1>
+
+<a href="{{ url_for('agregar_compra') }}">Registrar nueva compra</a>
+<br><br>
+<a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>
+
+<table border="1">
+    <tr>
+        <th>ID Compra</th>
+        <th>ID Usuario</th>
+        <th>Nombre Usuario</th>
+        <th>ID Videojuego</th>
+        <th>Nombre Videojuego</th>
+        <th>Fecha</th>
+    </tr>
+
+    {% for c in compras %}
+    <tr>
+        <td>{{ c[0] }}</td>
+        <td>{{ c[1] }}</td>
+        <td>{{ c[2] }}</td>
+        <td>{{ c[3] }}</td>
+        <td>{{ c[4] }}</td>
+        <td>{{ c[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
