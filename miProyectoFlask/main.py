@@ -8,8 +8,8 @@ class BaseDatos:
     def __init__(self):
         self.conn = psycopg2.connect(
             host="localhost",
-            database="crud_en_flask",     # <-- Cambiar por tu BD
-            user="admin",      # <-- Cambiar
+            database="videojuegos",     # <-- Cambiar por tu BD
+            user="administrador1",      # <-- Cambiar
             password="12345"  # <-- Cambiar
         )
         self.cursor = self.conn.cursor()
